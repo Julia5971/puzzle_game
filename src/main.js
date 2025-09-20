@@ -14,8 +14,21 @@ class Game {
     initialize() {
         // 게임 보드 초기화
         const boardElement = document.getElementById('gameBoard');
+        console.log('boardElement:', boardElement);
+        
         if (boardElement) {
-            boardElement.appendChild(this.gameBoard.initialize());
+            // 기존 내용 완전히 제거
+            boardElement.innerHTML = '';
+            
+            // 새로운 게임 보드 생성 및 추가
+            const newBoardElement = this.gameBoard.initialize();
+            console.log('newBoardElement:', newBoardElement);
+            console.log('newBoardElement children:', newBoardElement.children.length);
+            
+            boardElement.appendChild(newBoardElement);
+            
+            console.log('boardElement after append:', boardElement);
+            console.log('boardElement children:', boardElement.children.length);
         }
 
         console.log('나오미 퍼즐 게임이 초기화되었습니다!');
