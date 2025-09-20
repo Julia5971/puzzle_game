@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나오미 퍼즐 게임</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 게임 헤더 -->
+        <header class="game-header">
+            <h1 class="game-title">나오미 퍼즐</h1>
+            <div class="game-info">
+                <div class="score">점수: <span id="score">0</span></div>
+                <div class="turns">남은 턴: <span id="turns">30</span></div>
+            </div>
+        </header>
+
+        <!-- 게임 보드 -->
+        <main class="game-board" id="gameBoard">
+            <!-- 9×9 격자가 여기에 동적으로 생성됩니다 -->
+        </main>
+
+        <!-- 게임 컨트롤 -->
+        <footer class="game-controls">
+            <button class="btn btn-primary" id="startBtn">게임 시작</button>
+            <button class="btn btn-secondary" id="resetBtn">다시 시작</button>
+        </footer>
+    </div>
+
+    <!-- JavaScript 모듈들 -->
+    <script type="module" src="components/GameBoard.js"></script>
+    <script type="module" src="components/Block.js"></script>
+    <script type="module" src="components/UI.js"></script>
+    <script type="module" src="utils/helpers.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
